@@ -29,9 +29,9 @@
     
     <main>
         <div class="main">
-            <input id="num1" type="text" placeholder="Ingrese primer numero" >
-            <input id="num2" type="number" placeholder="Ingrese segundo numero">
-            <input id="num3" type="number"placeholder="Ingrese tercer numero" >
+            <input id="num1" type="number" placeholder="Ingrese primer nota" >
+            <input id="num2" onchange="calculateAverage()" type="number" placeholder="Ingrese segunda nota">
+            <input id="num3" type="number"placeholder="Ingrese tercer nota" >
         </div>
         <div class="btn">
             <input id="btn-calcular" type="button" value="Calcular Notas">
@@ -42,7 +42,7 @@
     
     <div class="contenido">
     <span class="total">0</span><br>
-    <span class="perdioAsinatura"></span><br>
+    <span class="subject"></span><br>
     <span class="ned1">Si deseas recuperar, Necesitas 0</span> <br>
     <span class="ned2">Para ganar satisfactoriamente necesitarias minimo 0</span><br>
     <span class="ned3">Para ganar con Honores, Necesitas minimo 0</span>
