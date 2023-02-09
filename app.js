@@ -1,8 +1,12 @@
 const calculate = document.getElementById('btn-calcular');
+
+const number1 = document.getElementById('num1');
+const number2 = document.getElementById('num2');
+const number3 = document.getElementById('num3');
+
+
 calculate.addEventListener('click',function conditional() {
-    let number1 = document.getElementById('num1');
-    let number2 = document.getElementById('num2');
-    let number3 = document.getElementById('num3');
+    
     let number1Average = number1.value *(.30);
     let number2Average = number2.value *(.30);
     let number3Average = number3.value *(.40);
@@ -31,9 +35,6 @@ calculate.addEventListener('click',function conditional() {
 
 function calculateAverage() {
     let noNotes=0;
-    let number1 = document.getElementById('num1');
-    let number2 = document.getElementById('num2');
-    let number3 = document.getElementById('num3');
     let number1Average = number1.value *(.30);
     let number2Average = number2.value *(.30);
     let number3Average = number3.value *(.40);
@@ -43,16 +44,12 @@ function calculateAverage() {
     let total = document.querySelector('.total');
     let subject = document.querySelector('.subject');
 
-    if (isNaN(num3)) {
-        num3 = 0;
-    }
-    
     const sumAverage = parseFloat(number1Average+number2Average+number3Average);
     total.innerHTML = `Nota Final. ${sumAverage}`;
 
     if(sumAverage <= 2.0) {
-        subject.innerHTML =  `Perdiste la asignatura`;
-        retrieve.innerHTML = `Si deseas recuperar, Necesitas ${ (2.1) - sumAverage} `;
+        subject.innerHTML =  `Vas perdiendo la asignatura`;
+        retrieve.innerHTML = `Si deseas recuperar, Necesitas ${ (2.1 - sumAverage) /.40} `;
         minWin.innerHTML = `Para ganar satisfactoriamente necesitarias minimo ${(3.5) - sumAverage  }`;
         winWithHonors.innerHTML = `Para ganar con Honores, Necesitas minimo ${(4.6) - sumAverage}`;
 
